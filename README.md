@@ -468,5 +468,3 @@ This project was built to practice:
 
 **Muhammad Adeel**
 
-Computer Science Student
-COMSATS University Islamabad
