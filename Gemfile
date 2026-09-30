@@ -9,7 +9,7 @@ gem "sqlite3", ">= 2.1"
 gem "fiddle"
 gem "prawn"
 gem "kaminari"
-gem "json", "2.21.2"
+gem "json", "3.0.2"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
