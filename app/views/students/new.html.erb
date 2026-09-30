@@ -1,0 +1,106 @@
+<%# <h1>Add New Student</h1>
+
+<form action="/students" method="post">
+
+  <div>
+    Name:
+    <input type="text" name="student[name]">
+  </div>
+
+  <br>
+
+  <div>
+    Email:
+    <input type="email" name="student[email]">
+  </div>
+
+  <br>
+
+  <div>
+    Phone:
+    <input type="text" name="student[phone]">
+  </div>
+
+  <br>
+
+  <input type="submit" value="Create Student">
+
+</form> %>
+
+
+
+
+
+
+<% content_for :title, "Add New Student | My First App" %>
+
+<div class="container signup-container">
+  <div class="signup-card">
+    <aside class="signup-intro">
+      <div class="signup-mark" aria-hidden="true">✦</div>
+      <p class="eyebrow">Student directory</p>
+      <h1>Build your student community.</h1>
+      <p class="signup-intro-text">
+      Add a new student to keep your records organized and your team connected.
+      </p>
+      <div class="signup-tip">
+      <span aria-hidden="true">✓</span>
+      <span>It only takes a minute to get started.</span>
+      </div>
+    </aside>
+
+    <main class="signup-form">
+      <div class="form-heading">
+      <p class="eyebrow">New profile</p>
+      <h2>Add a student</h2>
+      <p>Enter the details below to create a student profile.</p>
+      </div>
+
+      <form action="/students" method="post">
+      <div class="form-group">
+        <label for="student_name">Name</label>
+        <input
+          type="text"
+          name="student[name]"
+          id="student_name"
+          placeholder="Enter student name"
+          autocomplete="name"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="student_email">Email</label>
+        <input
+          type="email"
+          name="student[email]"
+          id="student_email"
+          placeholder="Enter student email"
+          autocomplete="email"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="student_phone">Phone <span>(optional)</span></label>
+        <input
+          type="text"
+          name="student[phone]"
+          id="student_phone"
+          placeholder="Enter phone number"
+          autocomplete="tel"
+        >
+      </div>
+
+      <div class="form-actions">
+        <a href="/students" class="btn btn-ghost">Cancel</a>
+        <input
+          type="submit"
+          value="Create Student"
+          class="btn btn-primary"
+        >
+      </div>
+      </form>
+    </main>
+  </div>
+</div>

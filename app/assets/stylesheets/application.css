@@ -1,0 +1,426 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+ * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #312e81);
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+/* Main Container */
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.header p {
+  color: #cbd5e1;
+  margin-top: 8px;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 11px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.btn-primary {
+  background: #2563eb;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-success {
+  background: #059669;
+}
+
+.btn-success:hover {
+  background: #047857;
+}
+
+.btn-warning {
+  background: #d97706;
+}
+
+.btn-warning:hover {
+  background: #b45309;
+}
+
+.btn-danger {
+  background: #dc2626;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+}
+
+.btn-purple {
+  background: #7c3aed;
+}
+
+.btn-purple:hover {
+  background: #6d28d9;
+}
+
+/* Glass Card */
+
+.card {
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 18px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Student Information */
+
+.student-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.student-info {
+  color: #dbeafe;
+  line-height: 1.8;
+}
+
+.actions {
+  margin-top: 18px;
+}
+
+/* Forms */
+
+.form-card {
+  max-width: 650px;
+  margin: 50px auto;
+}
+
+.signup-container {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-card {
+  width: min(960px, 100%);
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(360px, 1.15fr);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 28px;
+  background: rgba(15, 23, 42, 0.62);
+  box-shadow: 0 28px 70px rgba(2, 6, 23, 0.42);
+  backdrop-filter: blur(18px);
+}
+
+.signup-intro {
+  position: relative;
+  overflow: hidden;
+  padding: 48px 42px;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(96, 165, 250, 0.42), transparent 34%),
+    linear-gradient(150deg, rgba(37, 99, 235, 0.95), rgba(79, 70, 229, 0.85));
+}
+
+.signup-intro::after {
+  position: absolute;
+  right: -60px;
+  bottom: -75px;
+  width: 220px;
+  height: 220px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(255, 255, 255, 0.04), 0 0 0 56px rgba(255, 255, 255, 0.03);
+  content: "";
+}
+
+.signup-mark {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 56px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #bfdbfe;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.signup-intro h1 {
+  max-width: 310px;
+  margin: 0;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.signup-intro-text {
+  max-width: 310px;
+  margin: 20px 0 0;
+  color: #dbeafe;
+  line-height: 1.7;
+}
+
+.signup-tip {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 70px;
+  color: #eff6ff;
+  font-size: 13px;
+}
+
+.signup-tip span:first-child {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+.signup-form {
+  padding: 48px 52px;
+  background: rgba(15, 23, 42, 0.38);
+}
+
+.form-heading {
+  margin-bottom: 32px;
+}
+
+.form-heading h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+}
+
+.form-heading p:last-child {
+  margin: 0;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #e2e8f0;
+}
+
+.form-group label span {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.form-group input:hover {
+  border-color: rgba(147, 197, 253, 0.6);
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.form-actions .btn {
+  margin-right: 0;
+}
+
+.form-actions .btn-primary {
+  min-width: 148px;
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+/* Pagination */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 35px;
+}
+
+.pagination a,
+.pagination span {
+  padding: 9px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  text-decoration: none;
+}
+
+.pagination a:hover {
+  background: #2563eb;
+}
+
+.pagination .current {
+  background: #2563eb;
+  font-weight: bold;
+}
+
+/* Top Actions */
+
+.top-actions {
+  margin-bottom: 30px;
+}
+
+/* Empty Message */
+
+.empty-message {
+  text-align: center;
+  padding: 50px;
+  color: #cbd5e1;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .container {
+    width: 94%;
+    margin: 25px auto;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .header h1 {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .signup-container {
+    min-height: auto;
+    margin: 25px auto;
+  }
+
+  .signup-card {
+    grid-template-columns: 1fr;
+    border-radius: 22px;
+  }
+
+  .signup-intro,
+  .signup-form {
+    padding: 32px 24px;
+  }
+
+  .signup-mark {
+    margin-bottom: 32px;
+  }
+
+  .signup-tip {
+    margin-top: 32px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .btn {
+    margin-bottom: 8px;
+  }
+}

@@ -1,0 +1,114 @@
+<%# <h1>Student Management System</h1> %>
+
+<%# <%= link_to "Add New Student", new_student_path %> %>
+
+<%# <h2>Students</h2> %>
+
+<%# <a href="/students.pdf">Generate All Students PDF</a> %>
+
+<%# <% @students.each do |student| %> %>
+  <%# <p> %>
+    <%# <strong>Name:</strong> <%= student.name %> %>
+    |
+    <%# <strong>Email:</strong> <%= student.email %> %>
+    |
+    <%# <strong>Phone:</strong> <%= student.phone %> %>
+
+    <%# <a href="/students/<%= student.id %>/edit">Edit</a> %>
+    <%# <a href="/students/<%= student.id %>.pdf">PDF</a> %>
+
+
+    <%# <form action="/students/<%= student.id %>" method="post" style="display:inline;">
+      <%# <input type="hidden" name="_method" value="delete"> %>
+      <%# <input type="submit" value="Delete"> %>
+    <%# </form> %> %>
+
+  <%# </p> %>
+
+<%# <% end %> %>
+
+<%# <%= paginate @students %> %>
+
+
+
+
+<div class="container">
+
+  <div class="header">
+    <div>
+      <h1>Student Management</h1>
+      <p>Manage your students easily</p>
+    </div>
+
+    <div class="actions">
+      <a href="/students/new" class="btn btn-primary">
+        + Add Student
+      </a>
+
+      <form action="/session" method="post" style="display:inline;">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Logout" class="btn btn-danger">
+      </form>
+    </div>
+  </div>
+
+  <div class="top-actions">
+    <a href="/students.pdf" class="btn btn-purple">
+      Generate All Students PDF
+    </a>
+  </div>
+
+  <% if @students.any? %>
+
+    <% @students.each do |student| %>
+
+      <div class="card">
+
+        <div class="student-name">
+          <%= student.name %>
+        </div>
+
+        <div class="student-info">
+          <strong>ID:</strong> <%= student.id %><br>
+          <strong>Email:</strong> <%= student.email %><br>
+          <strong>Phone:</strong> <%= student.phone %><br>
+        </div>
+
+        <div class="actions">
+
+          <a href="/students/<%= student.id %>/edit"
+             class="btn btn-warning">
+            Edit
+          </a>
+
+          <a href="/students/<%= student.id %>.pdf"
+             class="btn btn-success">
+            PDF
+          </a>
+
+          <form action="/students/<%= student.id %>" method="post" style="display:inline;">
+
+            <input type="hidden" name="_method" value="delete">
+
+            <input type="submit" value="Delete" class="btn btn-danger">
+
+          </form>
+
+        </div>
+
+      </div>
+
+    <% end %>
+
+    <%= paginate @students %>
+
+  <% else %>
+
+    <div class="card empty-message">
+      <h2>No Students Found</h2>
+      <p>Add your first student to get started.</p>
+    </div>
+
+  <% end %>
+
+</div>
